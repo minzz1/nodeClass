@@ -1,10 +1,3 @@
-
-/**
- * express야 나 ejs 쓸거야
- */
-/**
- * ejs의 파일의 위치는 이프로젝트의 src 폴더에 client 폴더에 html 폴더 안에 있어
- */
 import express from "express";
 import viewRouter from "./router/viewRouter";
 import apiRouter from "./router/apiRouter";
@@ -13,6 +6,10 @@ const app = express();
 
 app.set("view engine", "ejs");
 app.set("views", process.cwd() + "/src/client/html");
+
+app.use("/css", express.static("src/client/css"));
+app.use("/js", express.static("src/client/js"));
+app.use("/file", express.static("src/client/file"));
 
 app.use("/api", apiRouter);
 app.use("/", viewRouter);
