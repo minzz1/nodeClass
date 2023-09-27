@@ -25,11 +25,25 @@
             </a>
         </li>
         <li>
-            <a href="/">
+            <a href="/profile">
                 <i class="fas fa-home"></i>
                 <p>프로필</p>
             </a>
         </li>
     </ul>
-    
 </footer>
+<script>
+const addClickStyle = () => {
+    const currentPath = window.location.pathname;
+    //페이지 주소 들어갈때마다 가져온다. 
+    const links = document.querySelectorAll(".footer ul li a");
+    //dom 태그를 가져온다. 
+    links.forEach((link) => {
+        if (link.getAttribute("href") === currentPath){
+            link.parentElement .classList.add("on");
+            //글자가 일치하면 부모(li)에 "on" class를 추가한다. 
+        }
+    })
+}
+    document.addEventListener("DOMContentLoaded", addClickStyle)
+</script>
