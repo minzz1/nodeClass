@@ -13,3 +13,7 @@ nodemon
 4. nodemon.json → 개발도중에 서버를 껏다켯다 하기 싫어서
 5. package.json → 스크립트 명령어를 정해줌
 
+
+백엔드
+npm i dotenv 설치
+npm install mysql2 설치

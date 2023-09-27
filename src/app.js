@@ -1,3 +1,7 @@
+import "dotenv/config";
+import "regenerator-runtime";
+//비동기 (async) 사용 하기 위함 
+
 import express from "express";
 import viewRouter from "./router/viewRouter";
 import apiRouter from "./router/apiRouter";
